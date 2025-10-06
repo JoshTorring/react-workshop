@@ -1,8 +1,5 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import Layout from "../components/layout"
-import Tile from "../components/tile";
-import { useEffect, useState } from "react";
-import CustomButton from "../components/CustomButton";
 
 export type Aircraft = {
   tailNumber: string;
@@ -18,20 +15,11 @@ export interface DashboardData {
 };
 
 function Dashboard() {
-    const [data, setData] = useState<DashboardData | null>(null);
 
-    useEffect(() => {
-        fetch("http://localhost:4000", {
-            headers: { "Content-Type": "application/json" }
-        })
-        .then(res => res.json())
-        .then(data => setData(data))
-        console.log("fetched data")
-    }, []);
+    // add the useEffect and useState here, working together to retrieve aircraft data from the api.
 
     return (
         <Layout>
-        <CustomButton buttonText="Hello!"/>
         <TableContainer>
             <Table>
             <TableHead>
@@ -43,7 +31,7 @@ function Dashboard() {
                 </TableRow>
             </TableHead>
 
-            <TableBody>{data && <Tile data={data} />}</TableBody>
+            <TableBody>{/* Add the tile component here and pass in the data */}</TableBody>
             </Table>
         </TableContainer>
         </Layout>

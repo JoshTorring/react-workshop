@@ -1,8 +1,6 @@
 import express from "express";
 import cors from "cors";
 
-
-
 type Aircraft = {
   tailNumber: string;
   status: string;
@@ -16,7 +14,6 @@ type Data = {
   aircraft: Aircraft[];
 };
 
-// expanded list for more randomness
 const allAircraft: Aircraft[] = [
   { tailNumber: "tail-001", status: "Landed", previousLocation: "Benson", nextLocation: "Brize Norton" },
   { tailNumber: "tail-002", status: "Taxiing", previousLocation: "Lossiemouth", nextLocation: "Marham" },
@@ -32,7 +29,6 @@ const allAircraft: Aircraft[] = [
   { tailNumber: "tail-012", status: "Ready for Takeoff", previousLocation: "Waddington", nextLocation: "Birmingham" },
 ];
 
-// helper function to pick random unique aircraft
 function getRandomAircraft(count: number): Aircraft[] {
   const shuffled = [...allAircraft].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
