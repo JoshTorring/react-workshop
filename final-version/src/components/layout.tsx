@@ -1,7 +1,8 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import type { ReactNode } from "react";
 
 type LayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 function Layout({children}:LayoutProps) {
@@ -12,7 +13,6 @@ function Layout({children}:LayoutProps) {
                     <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                         Aircraft Planning Tool
                     </Typography>
-                    <Typography>Login</Typography>
                 </Toolbar>
             </AppBar>
             <Box>

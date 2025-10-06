@@ -20,12 +20,16 @@ function Dashboard() {
     const [data, setData] = useState<DashboardData | null>(null);
 
     useEffect(() => {
+        getData()
+    }, []);
+
+    function getData() {
         fetch("https://localhost:4000", {
             headers: { "Content-Type": "application/json" }
         })
         .then(res => res.json())
         .then(data => setData(data))
-    }, []);
+    }
 
     return (
         <Layout>
