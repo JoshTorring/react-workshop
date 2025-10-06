@@ -1,7 +1,7 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import Layout from "../components/layout"
 import Tile from "../components/tile";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export type Aircraft = {
   tailNumber: string;
