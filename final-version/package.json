@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@mui/material": "^7.3.4",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3"
